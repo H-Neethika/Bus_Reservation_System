@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MedicalAppointmentSchedulingSystem
+build_property.RootNamespace = MedicalAppointmentSchedulingSystem
+build_property.ProjectDir = E:\Final_Project\2023-10-13\MedicalAppointmentSchedulingSystem\MedicalAppointmentSchedulingSystem\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\Final_Project\2023-10-13\MedicalAppointmentSchedulingSystem\MedicalAppointmentSchedulingSystem
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Calendar/YearCalendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJcWWVhckNhbGVuZGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Doctor/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Doctor/DoctorList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERvY3Rvckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Doctor/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Home/DoctorDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEb2N0b3JEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Patient/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Patient/PatientList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxQYXRpZW50TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Specialization/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlY2lhbGl6YXRpb25cQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Specialization/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlY2lhbGl6YXRpb25cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/Specialization/SpecializationList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlY2lhbGl6YXRpb25cU3BlY2lhbGl6YXRpb25MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/UserAuthentication/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/UserAuthentication/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXFJlZ2lzdHJhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Final_Project/2023-10-13/MedicalAppointmentSchedulingSystem/MedicalAppointmentSchedulingSystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

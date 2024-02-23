@@ -1,0 +1,154 @@
+﻿@model Bus_Reservation_System.Models.DTO.LoginModel
+@{
+
+}
+ 
+
+<style>
+    .login-container {
+        width: 400px;
+        height: fit-content;
+        background-color: rgba(255, 255, 255, 0.8); 
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 20px;
+    }
+   
+    .btn-default1{
+        width: 100%;
+        padding: 7px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 242px;
+        cursor: pointer;
+        margin-top:10px;
+    }
+
+    .btn-default2{
+        width: 100%;
+        padding: 7px;
+        background-color: white;
+        color: #007bff;
+        border: #007bff;
+        border-radius: 242px;
+        cursor: pointer;
+        margin-bottom:20px;
+    }
+
+    .btn-default1:hover {
+        background-color: #0056b3;
+    }
+
+    .input-container {
+        margin-bottom: 20px;
+        padding:0;
+    }
+
+    .btn-default {
+        display: block;
+        margin: 0 auto; 
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('/images/1_-2l0z4gN9-MuLgYyTXKscA.png');
+        background-size: cover;
+        height: 100vh;
+    }
+   
+    hr {
+        border: 0;
+        height: 1px;
+        background: #007bff;
+    }
+
+    .or-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+        color: #007bff;
+        font-weight: bold;
+    }
+    
+    .btn-outline-primary {
+        color: #007bff;
+        border-color: #007bff;
+        background-color: #fff;
+    }
+
+        .btn-outline-primary:hover {
+            color: #fff;
+            background-color: #007bff;
+        }
+
+    .input {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .w-40{
+width:0%;
+    }
+    .input-container{
+        margin-bottom:0;
+        border-radius: 242px;
+
+    }
+
+</style>
+
+<div class="login-container">
+    <form asp-action="Login" method="post">
+        <h2 class="pb-10">Login</h2>
+
+
+         <div class="input-container">
+            <label asp-for="Username" class="w-40">Username</label>      
+        </div>
+        <div class="input-container" >
+            <input type="text" style="border-radius: 242px; height:" class="input" asp-for="Username">
+        </div >
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="Username"></span>
+        </div> 
+
+       
+
+        <div class="input-container">
+            <label asp-for="Password" class="w-40">Password</label>
+        </div>
+        <div class="input-container">
+            <input type="password" style="border-radius: 242px;" class="input" asp-for="Password">
+        </div>
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="Password"></span>
+        </div>
+
+
+        @if (TempData["msg"] != null)
+        {
+            <div style="color:red;">
+                @TempData["msg"]
+            </div>
+        }
+
+        <button class="btn btn-default1" style="margin-top:50px;" type="submit">Login</button>
+        <div class="or-divider">
+            <hr style="flex: 1; margin: 0 10px;">
+            <span>or</span>
+            <hr style="flex: 1; margin: 0 10px;">
+        </div>
+        <a href="/UserAuthentication/Registration" class="btn btn-default2">Signup</a>
+
+    </form>
+</div>

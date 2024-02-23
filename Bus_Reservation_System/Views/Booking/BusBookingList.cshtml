@@ -1,0 +1,47 @@
+﻿@model Bus_Reservation_System.Models.DTO.BookingListVm
+@{
+}
+<style>
+    body{
+        background: linear-gradient(to right, #A199D5, #BBCFF0);
+    }
+</style>
+<div class="tbl-container">
+    <h2>Booking Details</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>PhoneNumber</th>
+            <th>NIC / Passport</th>
+            <th>Email</th>
+            <th>Bus No</th>
+            <th>Travel Date</th>
+            <th>Payment Slip</th>
+            
+            <th>Action</th>
+        </tr>
+        @foreach (var item in Model.BookingList)
+        {
+            <tr>
+                
+                <td>@item.Name</td>
+                <td>@item.PhoneNumber</td>
+                <td>@item.NIC_or_Passport</td>          
+                <td>@item.Email</td>
+                <td>@item.BusNo</td>
+                <td>@item.TravelDate</td>
+                <td><img style="height:100px;width:150px" src="/Uploads/@item.PaymentSlip"></td>
+                
+                <td>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btn btn-sec">Approve</a>
+                </td>
+               
+            </tr>
+        }
+
+    </table>
+    <div class="input-container">
+        <a href="/Home/Index" class="btn btn-default">Go To Main Page</a>
+    </div>
+</div>

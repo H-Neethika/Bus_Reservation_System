@@ -1,0 +1,60 @@
+﻿@model Bus_Reservation_System.Models.Domain.BusType
+@{
+    Layout = "_Layout";
+}
+<style>
+    .container {
+        padding: 165px; 
+    }
+
+    .input {
+        padding: 0 -13.5rem;
+    }
+
+    * {
+        padding: 0px;
+        margin: 0;
+    }
+
+    .w-40 {
+        width: fit-content;
+    }
+
+    label {
+        padding: 0.8rem;
+    }
+</style>
+<body style="background-image:url('/images/BusTickets-India.jpg'); background-size: cover;
+background-position: center center; background-repeat: no-repeat; height: 100vh; margin: 0;
+padding: 0; display: flex; justify-content: center; ">
+
+    <div style="background-color: rgba(255, 255, 255, 0.8); border-radius: 10px;
+        padding: 32px; text-align: center;justify-content:center; width:max-content;margin-left:270px; ">
+
+        <form class="w-40" asp-action="Update" method="post" style="align-content:center">
+            <h2 style="align-content:center; justify-content: center;" class="pb-10">Update Bus Types</h2>
+    <input type="hidden" class="input" asp-for="Id">
+
+            <div class="input-container" style="align-content:center; justify-content: center; width:500px">
+                <label asp-for="BusTypeName" class="w-40">BusType</label>
+                <input type="text" class="input" asp-for="BusTypeName">
+            </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="BusTypeName"> </span>
+    </div>
+
+    @if (TempData["msg"] != null)
+    {
+        <div class="alert mb-1">
+            @TempData["msg"]
+        </div>
+    }
+
+            <div class="input-container">
+                <button class="btn btn-default" type="submit">Save</button>
+                <a class="btn btn-sec" href="/BusType/BusTypeList" style="margin:0 0 0 20.5rem">All records</a>
+            </div>
+</form>
+    </div>
+
+</body>

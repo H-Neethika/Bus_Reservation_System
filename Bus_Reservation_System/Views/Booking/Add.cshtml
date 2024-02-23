@@ -1,0 +1,118 @@
+﻿
+@model Bus_Reservation_System.Models.Domain.Booking
+
+@{
+} 
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        background-image: url('/images/download (3).jpeg');
+        background-size: cover;
+        height: auto; 
+        padding: 0rem;
+    }
+
+    .form-container {
+        flex: 1;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8); 
+    }
+
+    .input-container {
+        margin-top: 20px;
+    }
+</style>
+
+
+<div class="container">
+    <div class="form-container">
+
+        <form style="margin-left:420px;" class="w-40" asp-action="Add" method="post" enctype="multipart/form-data">
+    <h2 class="pb-10" style="text-align:center">BOOKING</h2>
+
+    <div class="input-container">
+        <label asp-for="Name" class="w-40">Name</label>
+        <input type="text" class="input" asp-for="Name">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="Name"> </span>
+    </div>
+
+
+   
+    <div class="input-container">
+        <label asp-for="PhoneNumber" class="w-40">Phone Number</label>
+        <input type="text" class="input" asp-for="PhoneNumber">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="PhoneNumber"> </span>
+    </div>
+
+
+
+    <div class="input-container">
+        <label asp-for="NIC_or_Passport" class="w-40">NIC / Passport</label>
+        <input type="text" class="input" asp-for="NIC_or_Passport">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="NIC_or_Passport"> </span>
+    </div>
+
+
+
+    <div class="input-container">
+        <label asp-for="Email" class="w-40">Email</label>
+        <input type="text" class="input" asp-for="Email">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="Email"> </span>
+    </div>
+
+    <div class="input-container">
+        <label asp-for="BusNo" class="w-40">Bus Number</label>
+        <input type="text" class="input" asp-for="BusNo">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="BusNo"> </span>
+    </div>
+
+    <div class="input-container">
+        <label asp-for="TravelDate" class="w-40">Travel Date</label>
+        <input type="date" class="input" asp-for="TravelDate">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="TravelDate"> </span>
+    </div>
+
+    <div class="input-container">
+        <label asp-for="Name" class="w-40">Photo of Payment slip</label>
+                <input type="file" style="margin:17px 0 0 -70px" asp-for="ImageFile">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="ImageFile"> </span>
+    </div>
+
+
+    @if (TempData["msg"] != null)
+    {
+        <div class="alert mb-1">
+            @TempData["msg"]
+            <br />
+            Your booking will be confirmed within 24 hours.
+        </div>
+    }
+
+    <div class="input-container">
+        <button class="btn btn-default" type="submit">Book</button>
+        <a style="margin:0 0 0 363px" href="/Home/Index" class="btn btn-default">Go To Main Page</a>
+    </div>
+
+</form>
+    </div>
+</div>
+
+
+ 
+

@@ -1,0 +1,800 @@
+﻿@model Bus_Reservation_System.Models.Domain.Bus
+@{
+}
+
+
+
+<head>
+    <style>
+        #myButton {
+            background-color: #02913e; 
+            color: #ffffff; 
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+            #myButton.clicked {
+                background-color: #e77a15; 
+            }
+
+        h3, h4 {
+            padding: 10px;
+            color: white;
+        }
+
+        .movie-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .label {
+            width: 120px; 
+            text-align: left;
+            margin-right: 10px; 
+        }
+
+       
+    </style>
+</head>
+
+
+<div  style="display: flex; justify-content: space-around;">
+    
+    <div style="width: 40%;">
+        
+        <h2>Bus Seat Details</h2>
+    <form style="margin:10px 0px 0px 0px">
+        <button style="background-color:#02913e; width:20px; height:20px; "> </button>
+        <div style="display: inline-block;margin:10px 30px 10px 0px">
+            <h5>Available Seats</h5>
+        </div>
+
+        <button style="background-color:#e77a15; width:20px; height:20px"> </button>
+        <div style="display: inline-block;margin:10px 30px 10px 0px">
+            <h5>Processing Seats</h5>
+        </div>
+
+        <button style="background-color:#d6290d; width:20px; height:20px"> </button>
+        <div style="display: inline-block;margin:10px 30px 10px 0px">
+            <h5>Booked Seats</h5>
+        </div>
+
+    </form>
+
+    <form method="get">
+
+            @if (Model.Id == 1)
+            {
+                <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat1">01</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat5">05</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat9">09</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat13">13</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat17">17</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat21">21</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat25">25</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat29">29</a>
+
+                <br />
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat2">02</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat6">06</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat10">10</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat14">14</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat18">18</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat22">22</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat26">26</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat30">30</a>
+
+
+
+                </div>
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat31">31</a>
+                </div>
+
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat32">32</a>
+                </div>
+
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat3">03</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat7">07</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat11">11</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat15">15</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat19">19</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat23">23</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat27">27</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat33">33</a>
+
+                </div>
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat4">04</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat8">08</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat12">12</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat16">16</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat20">20</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat24">24</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat28">28</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 1'" class="btnseat" id="seat34">34</a>
+
+
+                </div>
+                <br />
+            }
+            @if (Model.Id == 2)
+            {
+                <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat1">01</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat5">05</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat9">09</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat13">13</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat17">17</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat21">21</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat25">25</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat29">29</a>
+
+                <br />
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat2">02</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat6">06</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat10">10</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat14">14</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat18">18</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat22">22</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat26">26</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat30">30</a>
+
+
+
+                </div>
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat31">31</a>
+                </div>
+
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat32">32</a>
+                </div>
+
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat3">03</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat7">07</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat11">11</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat15">15</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat19">19</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat23">23</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat27">27</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat33">33</a>
+
+                </div>
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat4">04</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat8">08</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat12">12</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat16">16</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat20">20</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat24">24</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat28">28</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 2'" class="btnseat" id="seat34">34</a>
+
+
+                </div>
+                <br />
+
+
+            }
+            @if (Model.Id == 3)
+            {
+                <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat1">01</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat5">05</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat9">09</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat13">13</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat17">17</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat21">21</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat25">25</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat29">29</a>
+
+                <br />
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat2">02</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat6">06</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat10">10</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat14">14</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat18">18</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat22">22</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat26">26</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat30">30</a>
+
+
+
+                </div>
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat31">31</a>
+                </div>
+
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat32">32</a>
+                </div>
+
+               
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat3">03</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat7">07</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat11">11</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat15">15</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat19">19</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat23">23</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat27">27</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat33">33</a>
+
+                </div>
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat4">04</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat8">08</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat12">12</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat16">16</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat20">20</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat24">24</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat28">28</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 3'" class="btnseat" id="seat34">34</a>
+
+
+                </div>
+                <br />
+            }
+            @if (Model.Id == 4)
+            {
+                <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat1">01</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat5">05</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat9">09</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat13">13</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat17">17</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat21">21</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat25">25</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat29">29</a>
+
+                <br />
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat2">02</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat6">06</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat10">10</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat14">14</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat18">18</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat22">22</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat26">26</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat30">30</a>
+
+
+
+                </div>
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat31">31</a>
+                </div>
+
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat32">32</a>
+                </div>
+
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat3">03</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat7">07</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat11">11</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat15">15</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat19">19</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat23">23</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat27">27</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat33">33</a>
+
+                </div>
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat4">04</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat8">08</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat12">12</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat16">16</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat20">20</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat24">24</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat28">28</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 4'" class="btnseat" id="seat34">34</a>
+
+
+                </div>
+                <br />
+            }
+
+            @if (Model.Id == 5)
+            {
+                <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat1">01</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat5">05</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat9">09</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat13">13</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat17">17</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat21">21</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat25">25</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat29">29</a>
+
+                <br />
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat2">02</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat6">06</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat10">10</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat14">14</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat18">18</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat22">22</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat26">26</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat30">30</a>
+
+
+
+                </div>
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat31">31</a>
+                </div>
+
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat32">32</a>
+                </div>
+
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat3">03</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat7">07</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat11">11</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat15">15</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat19">19</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat23">23</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat27">27</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat33">33</a>
+
+                </div>
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat4">04</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat8">08</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat12">12</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat16">16</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat20">20</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat24">24</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat28">28</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 5'" class="btnseat" id="seat34">34</a>
+
+
+                </div>
+                <br />
+            }
+
+            @if (Model.Id == 6)
+            {
+                <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat1">01</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat5">05</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat9">09</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat13">13</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat17">17</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat21">21</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat25">25</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat29">29</a>
+
+                <br />
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat2">02</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat6">06</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat10">10</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat14">14</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat18">18</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat22">22</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat26">26</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat30">30</a>
+
+
+
+                </div>
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat31">31</a>
+                </div>
+
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat32">32</a>
+                </div>
+
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat3">03</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat7">07</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat11">11</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat15">15</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat19">19</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat23">23</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat27">27</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat33">33</a>
+
+                </div>
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat4">04</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat8">08</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat12">12</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat16">16</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat20">20</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat24">24</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat28">28</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 6'" class="btnseat" id="seat34">34</a>
+
+
+                </div>
+                <br />
+            }
+
+            @if (Model.Id == 7)
+            {
+                <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat1">01</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat5">05</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat9">09</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat13">13</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat17">17</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat21">21</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat25">25</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat29">29</a>
+
+                <br />
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat2">02</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat6">06</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat10">10</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat14">14</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat18">18</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat22">22</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat26">26</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat30">30</a>
+
+
+
+                </div>
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat31">31</a>
+                </div>
+
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat32">32</a>
+                </div>
+
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat3">03</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat7">07</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat11">11</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat15">15</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat19">19</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat23">23</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat27">27</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat33">33</a>
+
+                </div>
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat4">04</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat8">08</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat12">12</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat16">16</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat20">20</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat24">24</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat28">28</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 7'" class="btnseat" id="seat34">34</a>
+
+
+                </div>
+                <br />
+            }
+
+             @if (Model.Id == 8)
+            {
+                <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat1">01</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat5">05</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat9">09</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat13">13</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat17">17</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat21">21</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat25">25</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat29">29</a>
+
+                <br />
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat2">02</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat6">06</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat10">10</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat14">14</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat18">18</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat22">22</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat26">26</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat30">30</a>
+
+
+
+                </div>
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat31">31</a>
+                </div>
+
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat32">32</a>
+                </div>
+
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat3">03</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat7">07</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat11">11</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat15">15</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat19">19</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat23">23</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat27">27</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat33">33</a>
+
+                </div>
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat4">04</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat8">08</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat12">12</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat16">16</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat20">20</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat24">24</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat28">28</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 8'" class="btnseat" id="seat34">34</a>
+
+
+                </div>
+                <br />
+            }
+
+            @if (Model.Id == 9)
+            {
+                <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat1">01</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat5">05</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat9">09</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat13">13</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat17">17</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat21">21</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat25">25</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat29">29</a>
+
+                <br />
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat2">02</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat6">06</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat10">10</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat14">14</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat18">18</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat22">22</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat26">26</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat30">30</a>
+
+
+
+                </div>
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat31">31</a>
+                </div>
+
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat32">32</a>
+                </div>
+
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat3">03</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat7">07</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat11">11</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat15">15</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat19">19</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat23">23</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat27">27</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat33">33</a>
+
+                </div>
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat4">04</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat8">08</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat12">12</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat16">16</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat20">20</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat24">24</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat28">28</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 9'" class="btnseat" id="seat34">34</a>
+
+
+                </div>
+                <br />
+            }
+
+            @if (Model.Id == 10)
+            {
+                <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat1">01</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat5">05</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat9">09</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat13">13</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat17">17</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat21">21</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat25">25</a>
+                <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat29">29</a>
+
+                <br />
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat2">02</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat6">06</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat10">10</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat14">14</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat18">18</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat22">22</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat26">26</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat30">30</a>
+
+
+
+                </div>
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat31">31</a>
+                </div>
+
+
+                <div style="margin:10px 0px 0px 468px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat32">32</a>
+                </div>
+
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat3">03</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat7">07</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat11">11</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat15">15</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat19">19</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat23">23</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat27">27</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat33">33</a>
+
+                </div>
+
+
+                <div style="margin:10px 0px 0px 0px">
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat4">04</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat8">08</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat12">12</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat16">16</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat20">20</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat24">24</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat28">28</a>
+                    <a onclick="window.location.href='/Home/BookingPage?busId= 10'" class="btnseat" id="seat34">34</a>
+
+
+                </div>
+                <br />
+            }
+
+            
+            
+        </form>
+        <div class="input-container" style="display:inline-block">
+            <a href="/Booking/Add" class="btn btn-sec">Book</a>
+            <a href="/Home/Index" class="btn btn-sec" style="margin:0 0 0 24.5rem">Back</a>
+        </div>
+    </div>
+
+   
+    <div style="width: 40%; height: 100%;">
+       
+        <section class="movies">
+            <div style="margin:65px 0 0 0; width: 80%; height: 100%; background-color:rgba(0, 0, 0, 0.7); color: white;border-color:#63228A;border-width:5px; padding: 20px; border-radius:20px">
+
+                <div class="movie-info" style="height: 100%; padding: 10px; box-shadow: 20px; display: flex; flex-direction: column;">
+                    <h3>Bus Details Summary</h3>
+                    <div class="info-item"><span class="label">Bus Name</span>: @Model.BusName</div>
+                    <div class="info-item"><span class="label">Bus No</span>: @Model.BusNo</div>
+                    <div class="info-item"><span class="label">From</span>: @Model.From</div>
+                    <div class="info-item"><span class="label">To</span>: @Model.To</div>
+                    <div class="info-item"><span class="label">Departure</span>: @Model.DepartureTime</div>
+                    <div class="info-item"><span class="label">Arrival</span>: @Model.ArrivalTime</div>
+                    <div class="info-item"><span class="label">Bus stops</span>: @Model.BusStops</div>
+                    <div class="info-item"><span class="label">Price</span>: LKR @Model.BookingPrice</div>
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+
+</div>
+
+<script>
+
+    
+
+            for (let i = 1; i <= 34; i++) {
+                const seatId = 'seat' + i;
+                const seat = document.getElementById(seatId);
+                const bookingStatus = localStorage.getItem(seatId);
+                if (bookingStatus === 'booked') {
+                    seat.style.backgroundColor = '#d6290d';
+                } else if (bookingStatus === 'reserved') {
+                    seat.style.backgroundColor = '#e77a15';
+                } else {
+                    seat.style.backgroundColor = '#02913e';
+                }
+
+                
+                seat.addEventListener('click', function () {
+                    const currentStatus = localStorage.getItem(seatId);
+                    if (currentStatus === 'booked') {
+                        alert('Seat already booked!');
+                    } else if (currentStatus === 'reserved') {
+                        localStorage.setItem(seatId, 'booked');
+                        seat.style.backgroundColor = '#d6290d';
+                        alert('Seat booked is approved successfully!');
+                    } else {
+                        localStorage.setItem(seatId, 'reserved');
+                        seat.style.backgroundColor = '#e77a15';
+                        alert('Seat reserved. Submit payment receipt to confirm booking.');
+                    }
+                });
+            }
+        </script>
+
+

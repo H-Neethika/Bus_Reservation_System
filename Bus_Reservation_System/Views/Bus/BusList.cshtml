@@ -1,0 +1,92 @@
+﻿@model Bus_Reservation_System.Models.DTO.BusListVm
+@{
+}
+
+<style>
+    .container{
+        background: linear-gradient(to right,#BBCFF0, #A199D5);
+    }
+
+    
+    .tbl-container {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 10px;
+    }
+
+    th {
+        background-color: #A199D5;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+   
+
+    .btn-container {
+        margin-top: 20px;
+    }
+
+
+</style>
+<div class="tbl-container">
+    <h2>Bus Details</h2>
+
+    <table>
+        <tr>
+
+            <th>Bus_Image</th>
+            <th>Bus_No</th>
+            <th>Bus_Name</th>
+            <th>Bus_Type</th>
+            <th>Seat_Capacity</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Bus_Stops</th>
+            <th>Departure_Time</th>
+            <th>Arrival_Time</th>
+            <th>Travel_Date</th>
+            <th>Action</th>
+        </tr>
+        @foreach(var item in Model.BusList)
+        {       
+            <tr>
+                <td><img style="height:100px;width:150px" src="/Uploads/@item.BusImage"></td>
+                <td>@item.BusNo</td>
+                <td>@item.BusName</td>
+                <td>@item.BusTypeNames</td>
+                <td>@item.SeatCapacity</td>
+                <td>@item.From</td>
+                <td>@item.To</td>
+                <td>@item.BusStops</td>
+                <td>@item.DepartureTime</td>
+                <td>@item.ArrivalTime</td>
+                <td>@item.TravelDate</td>
+                <td>
+                    <a href="/Bus/Edit?id=@item.Id" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                </td>
+                <td>
+                    <a onclick="return window.confirm('Are you sure?')" href="/Bus/Delete?id=@item.Id" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+     
+    </table>
+    <div class="input-container">
+        <a href="/Bus/Add" class="btn btn-sec">Back</a>
+    </div>
+</div>

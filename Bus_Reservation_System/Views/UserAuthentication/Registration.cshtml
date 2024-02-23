@@ -1,0 +1,209 @@
+﻿
+@model Bus_Reservation_System.Models.DTO.RegistrationModel
+@{
+    Layout = null;
+}
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('/images/1_-2l0z4gN9-MuLgYyTXKscA.png');
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Mukta', sans-serif; 
+        
+        
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-container {
+        margin-bottom: 20px;
+        text-align: left;
+        font-family: 'Mukta', sans-serif;
+    }
+
+    .input {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 106px;
+    }
+
+    .message-box {
+        color: red;
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    .btn-default {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 242px;
+        cursor: pointer;
+    }
+
+        .btn-default:hover {
+            background-color: #0056b3;
+        }
+
+    .btn-info {
+        margin-top: 10px;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .btn-info:hover {
+            text-decoration: underline;
+        }
+
+    .message-box {
+        color: blue; 
+        text-align: left;
+        padding: 10px 10px 0;
+    }
+
+        .message-box .icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px; 
+        }
+
+    
+
+    .success-message {
+        color: #007bff;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+
+    hr {
+        border: 0;
+        height: 1px;
+        background: #007bff;
+    }
+
+    .or-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .btn-default1 {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 242px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .btn-default2 {
+        width: 100%;
+        padding: 10px;
+        background-color: white;
+        color: #007bff;
+        border: #007bff;
+        border-radius: 242px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    .btn-default1:hover {
+        background-color: #0056b3;
+    }
+
+    label{
+        font-size:16px;
+    }
+
+    
+
+</style>
+<body>
+    <div class="login-container" style="font-family: 'Mukta', sans-serif;">
+    <form asp-action="Registration" method="post">
+            <h2 class="pb-2" style=" font-family: 'Mukta', sans-serif; ">Registration</h2>
+
+        <div class="input-container">
+            <label asp-for="Name">Name</label>
+            <input type="text" class="input" asp-for="Name" required>
+            <div class="message-box">
+                <span asp-validation-for="Name"></span>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <label asp-for="Username">Username</label>
+            <input type="text" class="input" asp-for="Username" required>
+            <div class="message-box">
+                <span asp-validation-for="Username"></span>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <label asp-for="Email">Email</label>
+            <input type="email" class="input" asp-for="Email" required>
+            <div class="message-box">
+                <span asp-validation-for="Email"></span>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <label asp-for="Password">Password</label>
+            <input type="password" class="input" asp-for="Password" required>
+            <div class="message-box">
+                <span asp-validation-for="Password"></span>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <label asp-for="PasswordConfirm">Confirm Password</label>
+            <input type="password" class="input" asp-for="PasswordConfirm" required>
+            <div class="message-box">
+                <span asp-validation-for="PasswordConfirm"></span>
+            </div>
+        </div>
+
+        @if (TempData["msg"] != null)
+        {
+            <div class="success-message">
+                <span class="icon">&#x2714;</span> @TempData["msg"]
+            </div>
+        }
+
+
+
+            <button class="btn btn-default1" style="margin-top:20px;" type="submit"><b>Signup</b></button>
+        <div class="or-divider">
+            <hr style="flex: 1; margin: 0 10px;">
+            <span>or</span>
+            <hr style="flex: 1; margin: 0 10px;">
+        </div>
+        <a href="/UserAuthentication/Login" style="text-align:center;color:#007bff;">Already have an account? Login</a>
+    </form>
+</div>
+</body>

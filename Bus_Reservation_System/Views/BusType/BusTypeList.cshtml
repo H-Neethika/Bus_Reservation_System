@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Bus_Reservation_System.Models.Domain.BusType>
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.6rem;
+        }
+
+        .table-container {
+            width: 50%;
+        }
+
+        .image-container {
+            width: 70%;
+            margin:-50px 0 0 0px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="table-container" style="margin-top:60px;">
+            
+            <table>
+                <tr>
+                    <th>Bus Types</th>
+                    <th>Action</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.BusTypeName</td>
+                        <td>
+                            <a href="/BusType/Edit?id=@item.Id" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                            <a onclick="return window.confirm('Are you sure?')" href="/BusType/Delete?id=@item.Id" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </table>
+            <div class="input-container">
+                <a href="/BusType/Add" class="btn btn-sec">Back</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="/images/a017c00e14f0afecb0c60a16ae2c5811.jpg" alt="Image Description">
+        </div>
+    </div>
+</body>
+</html>

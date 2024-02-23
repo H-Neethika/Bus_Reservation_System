@@ -1,0 +1,87 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Bus_Reservation_System
+build_property.RootNamespace = Bus_Reservation_System
+build_property.ProjectDir = D:\BusReservationSystem\Bus_Reservation_System\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\BusReservationSystem\Bus_Reservation_System
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/Booking/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/Booking/BusBookingList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xCdXNCb29raW5nTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/BusType/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzVHlwZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/BusType/BusTypeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzVHlwZVxCdXNUeXBlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/BusType/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzVHlwZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/Bus/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/Bus/BusList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzXEJ1c0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/Bus/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/Home/BookingPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCb29raW5nUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/UserAuthentication/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/UserAuthentication/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXFJlZ2lzdHJhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BusReservationSystem/Bus_Reservation_System/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

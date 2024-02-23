@@ -1,0 +1,200 @@
+﻿ @model Bus_Reservation_System.Models.Domain.Bus
+
+<style>
+   
+    .container {
+        display: flex;
+        justify-content: space-around;
+        background-image: url('/images/Busses.jpg');
+        background-size: cover;
+        height: auto; 
+        padding: 0rem;
+        margin-bottom: 0px;
+    }
+
+    .form-container, .form-details {
+        flex: 1;
+        padding: 69px;
+        background-color: #BBCFF0;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom:30px;
+    }
+
+    .input-container {
+        margin-top: 20px;
+    }
+
+        .input-container label {
+            font-weight: bold;
+        }
+
+        .input-container input[type="text"],
+        .input-container input[type="date"],
+        .input-container input[type="time"],
+        .input-container select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+    .message-box {
+        color: #ff0000;
+        font-size: 14px;
+    }
+    .btn{
+        margin-right:0rem;
+        padding:0rem 2rem;
+        border-radius:43.7rem;
+
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .btn-sec {
+        background-color: #4caf50;
+        color: white;
+        padding: 5px 38px;
+        text-decoration: none;
+        border-radius: 44px;
+        display: inline-block;
+    }
+
+        .btn-sec:hover {
+            background-color: #45a049;
+        }
+</style>
+
+   
+<form class="w-40" asp-action="Add" method="post" enctype="multipart/form-data" 
+        style="background-size: cover;
+        height: auto; 
+        padding: 0rem; ">
+    <h1 class="pb-10" style="text-align:center;">Add Bus Details</h1>
+<div class="container">
+    <div class="form-container" style="margin-right:50px">
+       
+        <div class="input-container">
+                <label asp-for="ImageFile" class="w-40" >Image</label>
+                <input type="file" asp-for="ImageFile" style="margin:15px 0 0 -5px;">
+        </div>
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="ImageFile"> </span>
+        </div>
+
+        <div class="input-container">
+            <label asp-for="BusName" class="w-40">Bus Name</label>
+            <input type="text" class="input" asp-for="BusName">
+        </div>
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="BusName"> </span>
+        </div>
+
+        <div class="input-container">
+            <label asp-for="BusTypes" class="w-40">Bus Type</label>
+            <select asp-items="Model.BusTypeList" class="input" asp-for="BusTypes" multiple>
+                <option value="">--select--</option>
+            </select>
+        </div>
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="BusTypes"> </span>
+        </div>
+
+        <div class="input-container">
+            <label asp-for="BusNo" class="w-40">Bus Number</label>
+            <input type="text" class="input" asp-for="BusNo">
+        </div>
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="BusNo"> </span>
+        </div>
+
+        <div class="input-container">
+            <label asp-for="SeatCapacity" class="w-40">Seat Capacity</label>
+            <input type="text" class="input" asp-for="SeatCapacity">
+        </div>
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="SeatCapacity"> </span>
+        </div>
+
+            <div class="input-container">
+                <label asp-for="TravelDate" class="w-40">Travel Date</label>
+                <input type="date" class="input" asp-for="TravelDate">
+            </div>
+            <div class="message-box pd-x-28 error">
+                <span asp-validation-for="TravelDate"> </span>
+            </div>
+            
+           
+    </div>
+    <div class="form-details">
+        
+        <div class="input-container">
+            <label asp-for="From" class="w-40">From</label>
+            <input type="text" class="input" asp-for="From">
+        </div>
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="From"> </span>
+        </div>
+
+        <div class="input-container">
+            <label asp-for="To" class="w-40">To</label>
+            <input type="text" class="input" asp-for="To">
+        </div>
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="To"> </span>
+        </div>
+
+        <div class="input-container">
+            <label asp-for="BusStops" class="w-40">Bus Stops </label>
+            <input type="text" class="input" asp-for="BusStops">
+        </div>
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="BusStops"> </span>
+        </div>
+
+        <div class="input-container">
+            <label asp-for="DepartureTime" class="w-40">Departure Time </label>
+            <input type="time" class="input" asp-for="DepartureTime">
+        </div>
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="DepartureTime"> </span>
+        </div>
+
+        <div class="input-container">
+            <label asp-for="ArrivalTime" class="w-40">Arrival Time</label>
+            <input type="time" class="input" asp-for="ArrivalTime">
+        </div>
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="ArrivalTime"> </span>
+        </div>
+
+       
+
+        <div class="input-container">
+            <label asp-for="BookingPrice" class="w-40">Booking Price</label>
+            <input type="text" class="input" asp-for="BookingPrice">
+        </div>
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="BookingPrice"> </span>
+        </div>
+
+        @if (TempData["msg"] != null)
+        {
+            <div class="alert mb-1">
+                @TempData["msg"]
+            </div>
+        }
+            <div class="btn-container">
+                <a class="btn btn-sec" href="/Bus/BusList" style="text-align:center">All records</a>
+                <button class="btn btn-sec" type="submit" style="margin-left:200px;">Save</button>
+            </div>
+     
+    </div>
+</div>
+</form>

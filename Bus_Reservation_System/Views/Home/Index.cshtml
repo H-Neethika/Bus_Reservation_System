@@ -1,0 +1,74 @@
+﻿
+
+@model Bus_Reservation_System.Models.DTO.BusListVm
+@{
+
+}
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.quote{
+        font-family: "Poppins", sans-serif;
+        font-size: 40px;
+        text-align:center;
+        padding:30px;
+
+}
+
+    .container {
+        padding: 0; 
+    }
+</style>
+<body style="margin: 0; padding: 0;background: rgb(83,62,171);">
+
+   
+    <div class="background-image" style="margin: 0; padding: 0; width:100%;height:100vh; background-image: url('/images/Section 8.png'); background-size: cover; background-position: center;">
+        <div class="quote">
+            <span style="color: white;">Redefining</span>
+            <span style="color: orange;">Your</span>
+            <span style="color: white;">Travel</span>
+            <span style="color: orange;">Experience!</span>
+        </div>
+      
+        <div style="margin-top:20px">
+            <section  class="search-bar" style=" padding: 1rem; text-align: center;">
+                <form method="get" asp-action="Index">
+                    <input type="text" name="term1" placeholder="From">
+                    <input type="text" name="term2" placeholder="To">
+                    <input type="date" name="term3" style="padding: 0.7rem; border: 1px solid lightgray; border-radius: 0.25rem; font-size: 1rem; width: 25%">
+                    <button type="submit" href="#searchSection"><i class="fa fa-search"></i> Search</button>
+                    <a class="btn btn-default" href="/Home/Index">All</a>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <section  class="movies" style="padding: 1rem;">
+        
+        @foreach (var bus in Model.BusList)
+        {
+            <div id="searchSection" class="movie-card" onclick="window.location.href='/Home/BookingPage?busId=@bus.Id'" style="background: linear-gradient(to right,#BBCFF0, #A199D5); margin-bottom: 1rem; border-radius:10px;">
+                <div class="movie-image">
+                    <img src="/Uploads//@bus.BusImage" style="width: 100%; height: auto;">
+                </div>
+                <div class="movie-info" style="text-align: left; padding: 1rem;">
+                    <h4>@bus.BusName</h4>
+                    <h4>Type : @bus.BusTypeNames</h4>
+                    <h4>Bus No : @bus.BusNo</h4>
+                    <h4>From : @bus.From</h4>
+                    <h4>To : @bus.To</h4>
+                    <h4>Departure : @bus.DepartureTime</h4>
+                    <h4>Arrival : @bus.ArrivalTime</h4>
+                    <h4>Bus stops : @bus.BusStops</h4>
+                    <h4>LKR @bus.BookingPrice</h4>
+                </div>
+            </div>
+        }
+    </section>
+
+</body>
+
+

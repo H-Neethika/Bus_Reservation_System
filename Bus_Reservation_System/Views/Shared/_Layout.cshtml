@@ -1,0 +1,107 @@
+﻿@{
+    string username = User.Identity.Name;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Bus Reservation System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="/images/movie_filter_FILL0_wght400_GRAD0_opsz48.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+</head>
+<style>
+   
+
+    .site-footer {
+        background-color: rgba(0, 0, 0, 0.5);
+        
+        color: white;
+    }
+
+    .dropdown-nav-link li:hover a {
+        color: #096AE5; 
+        transform: scale(1.1);
+    }
+
+    .nav-link li a {
+        color: white;
+        text-decoration: none;
+         
+    }
+
+        .nav-link li a:hover {
+            transform: scale(1.1); 
+            text-shadow: 2px 2px 4px #096AE5; 
+        }
+
+</style>
+
+
+<body>
+    <div class="menu">
+        <nav class="nav-bar" style="width:100%;
+    height:100px;
+    background-color:rgba(0, 0, 0, 0.5); ">
+            <div class="logo" style="color:white">
+                Hari Bus Travels Seat Reservation System
+            </div>
+            <ul class="nav-link">
+                <li><a class="active" href="/Home/Index">Home</a></li>
+                <li><a href="/Home/About">About</a></li>
+
+
+                @if (string.IsNullOrEmpty(username))
+                {
+                    <li><a href="/UserAuthentication/Login">Login</a></li>
+
+
+
+
+                }
+                @if (!string.IsNullOrEmpty(User.Identity.Name))
+                {
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li>
+                            <a href="#">Admin <i class="fa fa-caret-down"></i></a>
+
+                            <ul class="dropdown-nav-link" style="color:black">
+
+                                <li><a href="/BusType/Add" style="color:black;">BusType </a></li>
+                                <li><a href="/Bus/Add" style="color:black">BusDetails</a></li>
+                                <li><a href="/Booking/BusBookingList" style="color:black">BookingDetails</a></li>
+                                <li><a href="/UserAuthentication/Logout" style="color:black">Logout</a></li>
+
+
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                        <li><a href="/UserAuthentication/Logout">Logout</a></li>
+                    }
+
+                }
+
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer class="site-footer">
+    &#169; 2023 Hari Travels
+    </footer>
+</body>
+</html>
